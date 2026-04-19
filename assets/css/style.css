@@ -182,11 +182,30 @@ a:hover {
     color: var(--accent);
 }
 
+.paper-subtitle {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 17px;
+    color: var(--ink-soft);
+    line-height: 1.35;
+    margin: 0 0 6px 0;
+}
+
 .paper-authors {
     font-size: 15px;
     color: var(--muted);
     font-style: italic;
     margin: 0 0 10px 0;
+}
+.paper-authors a {
+    color: var(--muted);
+    border-bottom-color: rgba(122, 115, 104, 0.4);
+    font-style: italic;
+}
+.paper-authors a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
 }
 
 .paper-links {
