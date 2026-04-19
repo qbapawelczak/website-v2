@@ -1,0 +1,176 @@
+% Jakub M. Pawelczak — Curriculum Vitae
+% Build: pdflatex cv.tex  (run twice for cross-refs)
+% Output filename: 04-2026.pdf  (see build_cv.sh)
+
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=0.85in]{geometry}
+\usepackage{enumitem}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{parskip}
+\usepackage[hidelinks,breaklinks=true]{hyperref}
+\hypersetup{
+    pdftitle={Jakub M. Pawelczak — Curriculum Vitae},
+    pdfauthor={Jakub M. Pawelczak},
+    colorlinks=true,
+    urlcolor={black!70},
+    linkcolor={black}
+}
+
+% ---------- layout ----------
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+
+% Section headings: bold, with a thin rule below (no strikethrough)
+\titleformat{\section}
+  {\normalfont\large\bfseries}
+  {}{0pt}{}[{\vspace{0.15em}\titlerule[0.4pt]}]
+\titlespacing*{\section}{0pt}{1.0em}{0.35em}
+
+% Two-column entry: date on the left, content on the right
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcommand{\entry}[2]{%
+    \begin{tabularx}{\textwidth}{@{}p{1.7in}L@{}}
+        {#1} & {#2}
+    \end{tabularx}%
+    \vspace{0.25em}%
+}
+
+% Single-column entry (no date column) — for working papers
+\newcommand{\paper}[1]{%
+    \noindent #1\par\vspace{0.35em}%
+}
+
+% ---------- document ----------
+\begin{document}
+
+%% --- HEADER ---
+\begin{minipage}[t]{0.6\textwidth}
+    {\LARGE\bfseries Jakub M. Pawelczak}\\[0.4em]
+    Assistant Professor of Economics\\
+    Universidad del Pacífico, Lima, Peru
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.38\textwidth}\raggedleft
+    \href{mailto:jm.pawelczak@up.edu.pe}{jm.pawelczak@up.edu.pe}\\
+    \href{https://www.jakubpawelczak.com}{jakubpawelczak.com}\\[0.2em]
+    April 2026
+\end{minipage}
+
+\vspace{0.5em}
+
+
+%% --- APPOINTMENTS ---
+\section*{Appointments}
+\entry{2025 -- present}{Assistant Professor of Economics, Universidad del Pacífico, Lima, Peru.}
+
+
+%% --- EDUCATION ---
+\section*{Education}
+\entry{2025}{%
+    Ph.D.\ in Economics, University of Minnesota -- Twin Cities.\newline
+    Dissertation: \emph{Essays on Macroeconomics and Housing}.\newline
+    Advisor: Prof.\ Christopher Phelan.%
+}
+\entry{2024}{M.A.\ in Economics, University of Minnesota -- Twin Cities.}
+\entry{2018}{M.Sc.\ in Quantitative Economics, Université Paris~1 Panthéon-Sorbonne.}
+\entry{2016}{B.S.\ in Mathematics, University of Warsaw.}
+\entry{2015}{B.S.\ in Quantitative Methods in Economics and Information Systems, Warsaw School of Economics.}
+
+
+%% --- FIELDS ---
+\section*{Fields of Interest}
+Macroeconomics; Housing Markets; Intermediation; Spatial Economics.
+
+
+%% --- RESEARCH ---
+\section*{Working Papers}
+
+\paper{``Flipping Houses in a Decentralized Market.''}
+
+\paper{``Evaluating Universal Government Programs: A Structural Approach with Machine Learning'' (with Filip Premik).}
+
+\paper{``Homeownership as Rental Risk Insurance'' (with Hasan Cetin).}
+
+\paper{``Migration Policy in a Spatial Equilibrium Model'' (with Sean Bassler).}
+
+
+%% --- CONFERENCES ---
+\section*{Conferences and Seminars}
+\entry{2026}{Society for the Advancement of Economic Theory (SAET).}
+\entry{2025}{Summer Macro Workshop, Warsaw.}
+\entry{2025}{Urban Economics Association, European Meeting, Berlin.}
+\entry{2025}{European Economics Congress, Bordeaux.}
+\entry{2024}{Korea-America Economic Association (KAEA).}
+
+
+%% --- TEACHING ---
+\section*{Teaching}
+
+\textbf{Universidad del Pacífico}
+\vspace{0.25em}
+
+\entry{2026-1}{Macroeconomics~2 (Monetary Economics), Instructor.}
+
+\vspace{0.4em}
+\textbf{University of Minnesota -- Twin Cities}
+\vspace{0.25em}
+
+\entry{Fall 2024}{International Trade -- Writing Intensive, Instructor.}
+\entry{Fall 2023, Spring 2024}{International Trade -- Writing Intensive, Instructor.}
+\entry{Summer 2022, 2023, 2024}{Financial Economics, Instructor.}
+\entry{Spring 2022}{Intermediate Macroeconomics; Introduction to Econometrics, Teaching Assistant.}
+\entry{Fall 2021}{Microeconomic Analysis I/II (Pre-PhD Sequence), Teaching Assistant.}
+\entry{Summer 2021}{Math Refresher Course (Graduate), Instructor.}
+\entry{Fall 2020, Spring 2021}{Graduate Microeconomic Theory, Teaching Assistant.}
+
+
+%% --- RESEARCH EXPERIENCE ---
+\section*{Research Experience}
+\entry{2022 -- 2023}{Research Analyst, Federal Reserve Bank of Minneapolis. RA to Prof.\ Christopher Phelan.}
+\entry{2018 -- 2019}{Research Assistant, GRAPE, Warsaw. RA to Prof.\ Marek Weretka (University of Wisconsin -- Madison), ``Normative inference from asset prices'' project, National Science Center grant.}
+
+
+%% --- HONORS ---
+\section*{Honors and Awards}
+\entry{2019}{Leonid Hurwicz Fellowship, Department of Economics, University of Minnesota.}
+\entry{2018}{Young Economist Competition (3rd place), The Association of Polish Economists.}
+\entry{2017 -- 2018}{Scholarship of the French Government (Les Bourses du Gouvernement Français).}
+\entry{2016}{QEM Consortium Scholarship.}
+\entry{2012}{Scholarship of the Ministry of National Education, Poland.}
+
+
+%% --- SERVICE ---
+\section*{Service}
+\entry{2022 -- 2024}{Graduate Student Senator, Student and University Senate, College of Liberal Arts, University of Minnesota (two terms).}
+
+
+%% --- REFERENCES ---
+\section*{References}
+\begin{tabularx}{\textwidth}{@{}L L@{}}
+Professor Christopher Phelan & Professor V.~V.~Chari \\
+University of Minnesota      & University of Minnesota \\
+\href{mailto:cphelan@umn.edu}{cphelan@umn.edu} & \href{mailto:chari002@umn.edu}{chari002@umn.edu} \\[0.8em]
+Professor Larry E.~Jones     & Professor Jan Werner \\
+University of Minnesota      & University of Minnesota \\
+\href{mailto:lej@umn.edu}{lej@umn.edu} & \href{mailto:jwerner@umn.edu}{jwerner@umn.edu} \\
+\end{tabularx}
+
+
+%% --- SKILLS ---
+\section*{Computer Skills}
+Python, R, Stata, MATLAB, \LaTeX, Mathematica.
+
+
+%% --- LANGUAGES ---
+\section*{Languages}
+English (fluent), Polish (native), Spanish, German, French (basic).
+
+
+\end{document}

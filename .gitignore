@@ -8,3 +8,12 @@ Thumbs.db
 
 node_modules/
 .netlify/
+
+# LaTeX aux files
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
