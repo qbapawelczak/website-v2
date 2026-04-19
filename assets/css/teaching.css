@@ -1,0 +1,121 @@
+/* Teaching page specifics — inherits tokens from style.css */
+
+.back {
+    font-size: 14px;
+    color: var(--muted);
+    border-bottom: none;
+    display: inline-block;
+    margin-bottom: 32px;
+}
+.back:hover {
+    color: var(--accent);
+}
+
+.teach-group {
+    margin-bottom: 56px;
+}
+
+.teach-heading {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 22px;
+    margin: 0 0 18px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--rule);
+    letter-spacing: 0.005em;
+}
+.teach-sub {
+    color: var(--muted);
+    font-size: 15px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.course {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 20px;
+    padding: 14px 0;
+    border-bottom: 1px dotted var(--rule);
+}
+.course:last-child {
+    border-bottom: none;
+}
+
+.course-title {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 18px;
+    margin: 0 0 2px 0;
+}
+
+.course-meta {
+    color: var(--muted);
+    font-size: 14px;
+    margin: 0;
+}
+
+.course-links {
+    font-size: 14px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+/* collapsible micro subsections */
+.micro {
+    border-bottom: 1px dotted var(--rule);
+    padding: 10px 0;
+}
+.micro:last-child {
+    border-bottom: none;
+}
+.micro > summary {
+    cursor: pointer;
+    font-family: var(--sans);
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--ink);
+    padding: 8px 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.micro > summary::-webkit-details-marker { display: none; }
+.micro > summary::before {
+    content: "▸";
+    color: var(--muted);
+    font-size: 12px;
+    transition: transform 0.15s ease;
+    display: inline-block;
+}
+.micro[open] > summary::before {
+    transform: rotate(90deg);
+}
+.micro > summary:hover {
+    color: var(--accent);
+}
+
+.micro-list {
+    list-style: none;
+    padding: 6px 0 8px 22px;
+    margin: 0;
+    columns: 2;
+    column-gap: 32px;
+}
+.micro-list li {
+    font-size: 14px;
+    padding: 3px 0;
+    break-inside: avoid;
+}
+
+@media (max-width: 720px) {
+    .course {
+        flex-direction: column;
+        gap: 6px;
+    }
+    .micro-list {
+        columns: 1;
+    }
+}
